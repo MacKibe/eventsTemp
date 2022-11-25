@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0%;
+                padding: 0%;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 80%;
+                margin: 1% auto;
+                background-color: rgb(183, 143, 143);
+                color: #fff;
+                font-size: 150%;
+                overflow-y: hidden;
+            }
+
+            .title {
+                font-size: 1.5em;
+                text-align: center;
+                margin: 2% 0;
+                padding: 1.5% 0;
+                background-color: rgba(106, 63, 7, 0.536);
+            }
+
+            .title h2 {
+                margin: 0 auto;
+            }
+
+            .eventViewer {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                height: 80vh;
+                border: 5px solid rgb(255, 255, 255);
+            }
+
+            .side {
+                background-color: rgba(43, 68, 68, 0.79);
+                overflow-y: scroll;
+                display: grid;
+            }
+
+            .side .eventName {
+                background-color: rgba(177, 216, 180, 0.751);
+                text-align: center;
+            }
+            
+            .eventName span {
+                font-size: 1.83em;
+            }
+
+            .sidebar {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sidebar button {
+                border: none;
+                background-color: rgb(47, 47, 47);
+                margin: 5%;
+                padding:10% 5%;
+                text-align: center;
+                font-size: 130%;
+            }
+
+            .events {
+                background-color: rgba(1, 1, 1, 0.597);
+                width: 100%;
+            }
+
+            .events .eventDet {
+                background-color: rgba(177, 216, 180, 0.751);
+                text-align: center;
+            }
+
+            .events .eventDet span {
+                font-size: 1.83em;
+            }
+
+            .eventsDetails span {
+                padding: 10%;
+                font-size: 200%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h2>Event Viewer</h2>
+        </div>
+        <div class="eventViewer">
+            <div class="side">
+                    <div class="messages">
+                        Messages related
+                    </div>
+                    <div class="activity">
+                        Jobs
+                    </div>
+                </div><hr>
+            </div>
+            <div class="events">
+                <div class="eventDet">
+                    <span>
+                        Event Details
+                    </span>
+                </div><hr>
+                <div class="eventsDetails">
+                    <label>Name :<span></span></label>
+                    <label>Description :<span></span></label>
+                    <label>Start Date :<span></span></label>
+                    <label>End Date :<span></span></label>
+                    <label>Contributory :<span></span></label>
+                    <label>Mandatory :<span></span></label>
+                    <label>Start Date :<span></span></label>
+                    <label>End Date :<span></span></label>
+                    <label>Description :<span></span></label>
+                    <label>Related Message :<span></span></label>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
