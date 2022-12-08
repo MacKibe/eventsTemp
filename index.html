@@ -2,6 +2,8 @@
 <html>
     <head>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
             * {
                 margin: 0%;
                 padding: 0%;
@@ -11,112 +13,193 @@
             body {
                 width: 80%;
                 margin: 1% auto;
-                background-color: rgb(183, 143, 143);
+                background-color: rgb(83, 82, 80);
                 color: #fff;
                 font-size: 150%;
-                overflow-y: hidden;
+                overflow-y: scroll;
             }
-
-            .title {
-                font-size: 1.5em;
+            
+            header {
+                font-size: 1em;
                 text-align: center;
                 margin: 2% 0;
-                padding: 1.5% 0;
-                background-color: rgba(106, 63, 7, 0.536);
+                padding: 1.8% 0;
+                background-color: rgba(2, 71, 26, 0.781);
+                font-family: 'Caveat', cursive;
             }
 
-            .title h2 {
+            header h2 {
                 margin: 0 auto;
             }
 
             .eventViewer {
                 display: grid;
-                grid-template-columns: 1fr 2fr;
-                height: 80vh;
-                border: 5px solid rgb(255, 255, 255);
+                padding: 2%;
+                grid-template-columns: 1.1fr 3fr;
+                gap: 5%;
             }
 
-            .side {
-                background-color: rgba(43, 68, 68, 0.79);
-                overflow-y: scroll;
+            aside {
                 display: grid;
+                grid-template-rows: 1fr .8fr;
             }
 
-            .side .eventName {
-                background-color: rgba(177, 216, 180, 0.751);
-                text-align: center;
+            .eventLists {
+                height: 40vh;
+                overflow-y: scroll;
+                background-color: rgb(159, 156, 156);
             }
             
-            .eventName span {
-                font-size: 1.83em;
+            .eventLists a {
+                display: block;
+                text-decoration: none;
+                background-color: rgb(255, 255, 255);
+                margin: 5% 3%;
+                padding: 10% 4%;
+                text-align: center;
+                color: rgb(0, 166, 255);
             }
 
-            .sidebar {
-                width: 100%;
+            .eventLists a:visited {
+                background-color: rgba(2, 71, 26, 0.781);
+            }
+            
+            .events .date {
                 display: flex;
+                gap: 42%;
+                padding: 2% 5%;
+                background-color: #fff;
+                color: rgb(61, 2, 2);
+                font-weight: 600;
+            }
+
+            .eventsDetails {
+                display: flex;
+                flex-direction: column;
+                border: 9px solid rgba(255, 255, 255, 0.84);
+            }
+
+            .eventsDetails P {
+                margin: 5%;
+                background-color: rgb(83, 63, 35);
+                font-size: 110%;
+                font-weight: 600;
+                border-radius: 5%;
+                padding: 4% 6%;
+                color: rgb(255, 255, 255);
+                box-shadow: 26px 21px 16px rgb(0, 0, 0);
+                font-family: 'Gloria Hallelujah', cursive;
+            }
+            
+            .messo {
+                background-color: rgba(255, 255, 255, 0.395);
+                overflow-y: scroll;
+                height: 40vh;
+                margin-top: 5%;
+            }
+
+            .messo div {
+                background-color: rgb(58, 0, 0);
+                padding: 5%;
+                color: rgb(248, 120, 210);
+                margin: 6%;
+                display: flex;
+                gap: 15%;
                 flex-direction: column;
             }
 
-            .sidebar button {
-                border: none;
-                background-color: rgb(47, 47, 47);
-                margin: 5%;
-                padding:10% 5%;
-                text-align: center;
-                font-size: 130%;
+            .messo section {
+                font-size: 60%;
+                color: #fff;
+                
             }
 
-            .events {
-                background-color: rgba(1, 1, 1, 0.597);
-                width: 100%;
+            .contributions {
+                font-size: 140%;
+                display: flex;
+                gap: 20%;
+                margin: 2% 5%;
+                margin-right: 2%;
             }
 
-            .events .eventDet {
-                background-color: rgba(177, 216, 180, 0.751);
-                text-align: center;
+            .loca span{
+                color: black;
             }
 
-            .events .eventDet span {
-                font-size: 1.83em;
+            .con Span{
+                color: black;
             }
 
-            .eventsDetails span {
-                padding: 10%;
-                font-size: 200%;
+            @media (max-width: 768px) {
+                .eventViewer {
+                    display: flex;
+                    flex-direction:column-reverse;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="title">
-            <h2>Event Viewer</h2>
-        </div>
         <div class="eventViewer">
-            <div class="side">
-                    <div class="messages">
-                        Messages related
+            <aside>
+                <div class="panelEvents">
+                    <p>Other Events</p>
+                    <div class="eventLists">
+                        <a href="index.html">Ngong Hills Hiking</a>
+                        <a href="#">Mararanja Day</a>
+                        <a href="#">Goat Eating</a>
+                        <a href="#">Match Day</a>
+                        <a href="#">Kim's Wedding</a>
                     </div>
-                    <div class="activity">
-                        Jobs
+                </div>
+                <div class="messages">
+                    <p>Messages related</p>
+                    <div class="messo">
+                        <div>
+                            Hi guys
+                            <section>Sent by: James</section>
+                        </div>
+                        <div>
+                            Hi James
+                            <section>Sent by: Mary</section>
+                        </div>
+                        <div>
+                            Just a reminder guys. We'll meet at Ngong Town for the hike!
+                            <section>Sent by: James</section>
+                        </div>
+                        <div>
+                            Cool!!
+                            <section>Sent by: Frank</section>
+                        </div>
+                        <div>
+                            Noted
+                            <section>Sent by: Mike</section>
+                        </div>
                     </div>
-                </div><hr>
-            </div>
+                </div>
+            </aside>
             <div class="events">
-                <div class="eventDet">
-                    <span>
-                        Event Details
-                    </span>
-                </div><hr>
+                <header>
+                    <!-- The event name -->
+                    <h2>Ngong Hills Hiking</h2>
+                </header>
+                <div class="date">
+                    <label>Start Date :<span>11/12/2022</span></label>
+                    <label>End Date :<span></span>17/12/2022</label>
+                </div>
                 <div class="eventsDetails">
-                    <label>Name :<span></span></label>
-                    <label>Description :<span></span></label>
-                    <label>Start Date :<span></span></label>
-                    <label>End Date :<span></span></label>
-                    <label>Contributory :<span></span></label>
-                    <label>Mandatory :<span></span></label>
-                    <label>Start Date :<span></span></label>
-                    <label>End Date :<span></span></label>
-                    <label>Description :<span></span></label>
-                    <label>Related Message :<span></span></label>
+                    <div class="eventInfo">
+                        <p>
+                            On 11<sup>th</sup> December will be having a hike at Ngong Hills as we discussed Earlier last month so avail yourselves team.
+                        </p>
+                    </div>
+                    <div class="contributions">
+                        <div class="loca">
+                            Location: <br> <span>Ngong Hills</span>
+                        </div>
+                        <div class="con">
+                            Contributions:<br>Mandatory:<br> <span>Amount: <span><b>1,500 Kshs</b> Per Head</span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
